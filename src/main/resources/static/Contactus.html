@@ -1,0 +1,239 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no, initial-scale=0.1">
+<title>天津正恒科技发展有限公司</title>
+<link rel="stylesheet" href="css/index.css" type="text/css">
+<link rel="stylesheet" type="text/css" href="css/zy.css">
+    <link rel="shortcut icon" type="image/x-icon" href="img/tubiao.ico" />
+<script type="text/javascript" src="js/jQuery-1.10.1.min.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
+
+</head>
+<body>
+<!--头部-->
+<div class="content">
+    <div class="bj_jz">
+        <div class="logo"><a href="./"><img src="img/logo.png"></a></div>
+        <ul class="venus-menu">
+            <li><a href="index.html"><i class="icon-home"></i>首页</a></li>
+            <li>
+                <a href="company.html"><i class="icon-magic"></i>公司简介</a>
+                <ul>
+                    <li><a href="company.html">公司简介</a></li>
+                    <li><a href="company.html">企业文化</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="Anchor.html"><i class="icon-thumbs-up"></i>主播展示</a>
+                <ul>
+                    <li><a href="Anchor.html">主播展示</a></li>
+                    <!--<li><a href="#">美食达人</a></li>-->
+                    <!--<li><a href="#">旅游达人</a></li>-->
+                    <!--<li><a href="#">服装达人</a></li>-->
+                </ul>
+            </li>
+            <li>
+                <a href="recruitment.html"><i class="icon-quote-right"></i>在线招募</a>
+                <ul>
+                    <li><a href="recruitment.html">主播招募</a></li><li><a href="recruitment_scout.html">星探招募</a></li>
+                    <li><a href="//shang.qq.com/wpa/qunwpa?idkey=b269571d216bae660badc1b6f85dc58063f1b65a24d8b901141e75ef9127ef7a">在线QQ</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="news.html"><i class="icon-envelope-alt"></i>新闻动态</a>
+                <ul>
+                    <li><a href="news.html">公司新闻</a></li>
+                    <li><a href="#">行业新闻</a></li>
+                </ul>
+
+            </li>
+            <li>
+                <a href="tp.html"><i class="icon-envelope-alt"></i>投票活动</a>
+            </li>
+            <li class="active"><a href="Contactus.html"><i class="icon-envelope-alt"></i>联系我们</a></li>
+            <li class="search">
+                <a href="recruitment.html"><img src="images/t_tb_03.png"><span>在线报名</span></a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<!--内容-->
+<div class="ziye_tu_bj">
+    <img class="zyt" src="images/lxwm_t_02.jpg">
+    <div class="ziye_tu_nr">
+        <h1>联系我们<span>Contact us</span></h1>
+        <p><img src="images/swsj_03.png"><a href="index.html">首页 </a> > 联系我们</p>
+    </div>
+</div>
+
+<!--二级导航-->
+<div class="ziye_ej_b">
+    <ul class="ziye_ejjz">
+        <li class="ziyehdh_dq"><a href="news.html">联系我们</a></li>
+    </ul>
+</div>
+
+<div class="ksj_jianjie">
+    <div class="ksj_jianjie_z">
+        <div class="lianxi_wm">
+            <h1>天津正恒科技发展有限公司</h1>
+            <h2>公司地址:</h2>
+            <p>天津市</p>
+            <p>武清区</p>
+            <p>京滨工业园</p>
+            <p>京滨睿城</p>
+        </div>
+        <div class="bd_dt">
+            <!--sss-->
+            <div id="wrap" class="my-map">
+                <div id="mapContainer"></div>
+            </div>
+            <script src="http://webapi.amap.com/maps?v=1.3&key=8325164e247e15eea68b59e89200988b"></script>
+            
+
+            <script>
+            !function(){
+                var infoWindow, map, level = 12,
+                    center = {lng: 116.813231, lat: 39.551933},
+                    features = [];
+         
+                function loadFeatures(){
+                    for(var feature, data, i = 0, len = features.length, j, jl, path; i < len; i++){
+                        data = features[i];
+                        switch(data.type){
+                            case "Marker":
+                                feature = new AMap.Marker({ map: map, position: new AMap.LngLat(data.lnglat.lng, data.lnglat.lat),
+                                    zIndex: 3, extData: data, offset: new AMap.Pixel(data.offset.x, data.offset.y), title: data.name,
+                                    content: '<div class="icon icon-' + data.icon + ' icon-'+ data.icon +'-' + data.color +'"></div>' });
+                                break;
+                            case "Polyline":
+                                for(j = 0, jl = data.lnglat.length, path = []; j < jl; j++){
+                                    path.push(new AMap.LngLat(data.lnglat[j].lng, data.lnglat[j].lat));
+                                }
+                                feature = new AMap.Polyline({ map: map, path: path, extData: data, zIndex: 2,
+                                    strokeWeight: data.strokeWeight, strokeColor: data.strokeColor, strokeOpacity: data.strokeOpacity });
+                                break;
+                            case "Polygon":
+                                for(j = 0, jl = data.lnglat.length, path = []; j < jl; j++){
+                                    path.push(new AMap.LngLat(data.lnglat[j].lng, data.lnglat[j].lat));
+                                }
+                                feature = new AMap.Polygon({ map: map, path: path, extData: data, zIndex: 1,
+                                    strokeWeight: data.strokeWeight, strokeColor: data.strokeColor, strokeOpacity: data.strokeOpacity,
+                                    fillColor: data.fillColor, fillOpacity: data.fillOpacity });
+                                break;
+                            default: feature = null;
+                        }
+                        if(feature){ AMap.event.addListener(feature, "click", mapFeatureClick); }
+                    }
+                }
+         
+                function mapFeatureClick(e){
+                    if(!infoWindow){ infoWindow = new AMap.InfoWindow({autoMove: true}); }
+                    var extData = e.target.getExtData();
+                    infoWindow.setContent("<h5>" + extData.name + "</h5><div>" + extData.desc + "</div>");
+                    infoWindow.open(map, e.lnglat);
+                }
+         
+                map = new AMap.Map("mapContainer", {center: new AMap.LngLat(center.lng, center.lat), level: level});
+                 
+                loadFeatures();
+         
+                map.on('complete', function(){
+                    map.plugin(["AMap.ToolBar", "AMap.OverView", "AMap.Scale"], function(){
+                        map.addControl(new AMap.ToolBar);
+                    map.addControl(new AMap.OverView({isOpen: true}));
+                    map.addControl(new AMap.Scale);
+                    });
+                })
+                 
+            }();
+            </script>
+            <!--hhh-->
+        </div>
+    </div>
+</div>
+<!--页尾-->
+<div class="yw" id="yw">
+    <div class="yw_jz">
+        <div class="liebiao">
+            <div class="zuo_logo">
+                <img src="img/logo.png">
+                <ul>
+                    <li>
+                        <h3>公司简介</h3>
+                        <a href="company.html">公司简介</a>
+                        <a href="company.html">企业文化</a>
+                    </li>
+                    <li>
+                        <h3>主播展示</h3>
+                        <a href="Anchor.html">主播展示</a>
+                        <!--<a href="#">美食达人</a>-->
+                        <!--<a href="#">旅游达人</a>-->
+                        <!--<a href="#">服装达人</a>-->
+                    </li>
+                    <li>
+                        <h3>在线招募</h3>
+                        <a href="recruitment.html">主播招募</a>
+                        <a href="//shang.qq.com/wpa/qunwpa?idkey=b269571d216bae660badc1b6f85dc58063f1b65a24d8b901141e75ef9127ef7a">在线QQ</a>
+                    </li>
+                    <li>
+                        <h3>新闻动态</h3>
+                        <a href="news.html">公司新闻</a>
+                        <a href="#">行业新闻</a>
+                    </li>
+                    <li>
+                        <h3>投票活动</h3>
+                        <a href="tp.html">活动详情</a>
+                    </li>
+                    <li>
+                        <h3>联系我们</h3>
+                        <a href="Contactus.html">联系我们</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="ewm">
+                <div class="lxfs">
+                    <h1>加入我们</h1>
+                    <div class="qqzx"><a target="_blank" href="//shang.qq.com/wpa/qunwpa?idkey=b269571d216bae660badc1b6f85dc58063f1b65a24d8b901141e75ef9127ef7a"><img border="0" src="//pub.idqqimg.com/wpa/images/group.png" alt="。" title="加入群组"></a></div>
+                </div>
+                <div>
+                    <div class="sm"><img src="images/ewm_03.jpg"><span>官方订阅号</span></div>
+                    <div class="sm"><img src="images/ewm_03.jpg"><span>官方服务号</span></div>
+                </div>
+            </div>
+        </div>
+        <!--<div class="beianhao">-->
+            <!--<p>xxxxxxxxxxxx</p>-->
+            <!--<p>xxxxxxxxxx</p>-->
+        <!--</div>-->
+    </div>
+</div>
+<div class="side">
+    <ul>
+        <li><a href="#yw" ><div class="sidebox"><img src="img/side_icon06.png">公众号</div></a></li>
+        <li><a href= "//shang.qq.com/wpa/qunwpa?idkey=b269571d216bae660badc1b6f85dc58063f1b65a24d8b901141e75ef9127ef7a"><div class="sidebox"><img src="img/side_icon04.png">QQ</div></a></li>
+        <li><a href= "https://weibo.com/zhScience?is_hot=1" target="_blank"><div class="sidebox"><img src="img/side_icon03.png">新浪微博</div></a></li>
+        <li style="border:none;"><a href="javascript:goTop();" class="sidetop"><img src="img/side_icon05.png"></a></li>
+    </ul>
+</div>
+<script>
+    $(document).ready(function(){
+
+        $(".side ul li").hover(function(){
+            $(this).find(".sidebox").stop().animate({"width":"124px"},200).css({"opacity":"1","filter":"Alpha(opacity=100)","background":"#ae1c1c"})
+        },function(){
+            $(this).find(".sidebox").stop().animate({"width":"54px"},200).css({"opacity":"0.8","filter":"Alpha(opacity=80)","background":"#000"})
+        });
+
+    });
+    function goTop(){
+        $('html,body').animate({'scrollTop':0},600);
+    }
+
+</script>
+
+</body>
+</html>

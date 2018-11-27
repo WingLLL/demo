@@ -1,0 +1,12 @@
+.sresult{width: 1204px;min-height: 750px;}
+.sresult a{ display:block;}
+.sresult dl{ width:319px; padding:40px; float:left;position: relative;border-right: 1px solid #e7e7e7;border-bottom: 1px solid #e7e7e7;border-left: 1px solid #e7e7e7;border-top: 1px solid #e7e7e7;}
+.sresult dl:hover{ background:#f9f9f9;}
+.sresult dl dt{float: left;margin-right: 15px;padding-top: 6px;}
+.sresult dl dt img{ width:62px; height:62px; display:block; border-radius:50%;}
+.sresult dl dd h4{font-size: 16px;color: #ff3300;height: 26px;line-height: 26px;overflow: hidden;width: 190px;}
+.sresult dl dd p{font-size: 14px;color: #888888;height: 26px;line-height: 26px;overflow: hidden;}
+.sresult dl dd .ptimg{position: absolute;right: 40px;top: 40px; width:70px;}
+.sresult dl dd p{width:160px;}
+/*.sresult dl dd .ptimg img{height: 40px;display: block;margin: 0 auto;}*/
+.sresult dl dd .ptimg .see{width:70px;height: 26px;line-height: 26px;display:block;text-align: center;background: #f07801;color: #fff;border-radius: 2px;margin-top: 50px;}

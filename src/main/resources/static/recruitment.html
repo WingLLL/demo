@@ -1,0 +1,340 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no, initial-scale=0.1">
+<title>天津正恒科技发展有限公司</title>
+<link rel="stylesheet" href="css/index.css" type="text/css">
+<link rel="stylesheet" type="text/css" href="css/zy.css"/>
+<link rel="shortcut icon" type="image/x-icon" href="img/tubiao.ico" />
+<script type="text/javascript" src="js/jQuery-1.10.1.min.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
+
+</head>
+<body>
+<!--头部-->
+<div class="content">
+    <div class="bj_jz">
+        <div class="logo"><a href="./"><img src="img/logo.png"></a></div>
+        <ul class="venus-menu">
+            <li><a href="index.html"><i class="icon-home"></i>首页</a></li>
+            <li>
+                <a href="company.html"><i class="icon-magic"></i>公司简介</a>
+                <ul>
+                    <li><a href="company.html">公司简介</a></li>
+                    <li><a href="company.html">企业文化</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="Anchor.html"><i class="icon-thumbs-up"></i>主播展示</a>
+                <ul>
+                    <li><a href="Anchor.html">主播展示</a></li>
+                    <!--<li><a href="#">美食达人</a></li>-->
+                    <!--<li><a href="#">旅游达人</a></li>-->
+                    <!--<li><a href="#">服装达人</a></li>-->
+                </ul>
+            </li>
+            <li class="active">
+                <a href="recruitment.html"><i class="icon-quote-right"></i>在线招募</a>
+                <ul>
+                    <li><a href="recruitment.html">主播招募</a></li>
+                    <li><a href="recruitment_scout.html">星探招募</a></li>
+                    <li><a href="//shang.qq.com/wpa/qunwpa?idkey=b269571d216bae660badc1b6f85dc58063f1b65a24d8b901141e75ef9127ef7a">在线QQ</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="news.html"><i class="icon-envelope-alt"></i>新闻动态</a>
+                <ul>
+                    <li><a href="news.html">公司新闻</a></li>
+                    <li><a href="#">行业新闻</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="tp.html"><i class="icon-envelope-alt"></i>投票活动</a>
+            </li>
+            <li><a href="Contactus.html"><i class="icon-envelope-alt"></i>联系我们</a></li>
+            <li class="search">
+                <a href="recruitment.html"><img src="images/t_tb_03.png"><span>在线报名</span></a>
+            </li>
+        </ul>
+    </div>
+</div>
+<!--内容-->
+<div class="ziye_tu_bj">
+    <img class="zyt" src="images/bmb_02.jpg">
+    <div class="ziye_tu_nr">
+        <h1>在线招募<span>Recruitment</span></h1>
+        <p><img src="images/swsj_03.png"><a href="index.html">首页 </a> > 在线招募</p>
+    </div>
+</div>
+
+<!--二级导航-->
+<div class="detail">
+    <div class="ziye_ej_b">
+        <ul class="ziye_ejjz" id="ziye_ejjz">
+            <li class="ziyehdh_dq" onclick="changeTabs(this)"><a>主播招募</a></li>
+            <li onclick="changeTabs(this)"><a>星探招募</a></li>
+            <li><a href="//shang.qq.com/wpa/qunwpa?idkey=b269571d216bae660badc1b6f85dc58063f1b65a24d8b901141e75ef9127ef7a">在线QQ</a></li>
+        </ul>
+    </div>
+    <article class="tab_content0">
+        <div class="ksj_jianjie">
+            <div class="ksj_jianjie_z">
+                <form method="POST" enctype="multipart/form-data" action="fileUpLoad.action">
+                    <table class="ybmb">
+                        <caption><h1 class="ybmb_bt">预主播招募信息填写(模板简历下方下载上传)</h1></caption>
+                        <tbody>
+                            <tr>
+                                <td class="b1">直播种类**</td>
+                                <td class="b2"><input type="text"disabled="disabled"  placeholder="输入的姓名（必填）"></td>
+                                <td class="b1">性别</td>
+                                <td class="b2"><input type="text" disabled="disabled" placeholder="输入的性别（必填）"></td>
+                            </tr>
+                            <tr>
+                                <td class="b1">艺名</td>
+                                <td class="b2"><input type="text" disabled="disabled" placeholder="您的艺名"></td>
+                                <td class="b1">身高</td>
+                                <td class="b2"><input type="text" disabled="disabled" placeholder="如：165CM（必填）"></td>
+                            </tr>
+                            <tr>
+                                <td class="b1">体重</td>
+                                <td class="b2"><input type="text" disabled="disabled" placeholder="如；55kg必填）"></td>
+                                <td class="b1">出生日期</td>
+                                <td class="b2"><input type="text" disabled="disabled" placeholder="如：1993年11月02日（必填）"></td>
+                            </tr>
+                            <tr>
+                                <td class="b1">户籍</td>
+                                <td class="b2"><input type="text" disabled="disabled" placeholder="如：贵州 贵阳（必填）"></td>
+                                <td class="b1">年龄</td>
+                                <td class="b2"><input type="text" disabled="disabled" placeholder="输入您的年龄（必填）"></td>
+                            </tr>
+
+                            <tr>
+                                <td class="b1">星座</td>
+                                <td class="b2"><input type="text" disabled="disabled" placeholder="您的星座"></td>
+                                <td class="b1">三围</td>
+                                <td class="b2"><input type="text" disabled="disabled" placeholder="如：88.70、 62.61、90.00"></td>
+                            </tr>
+                            <tr>
+                                <td class="b1">手机</td>
+                                <td class="b2"><input type="text" disabled="disabled" placeholder="您的手机号码（必填）"></td>
+                                <td class="b1">邮箱</td>
+                                <td class="b2"><input type="text" disabled="disabled" placeholder="邮箱（必填）"></td>
+                            </tr>
+                            <tr>
+                                <td class="b1">微信</td>
+                                <td class="b2"><input type="text" disabled="disabled" placeholder="您的微信（必填）"></td>
+                                <td class="b1">QQ</td>
+                                <td class="b2"><input type="text" disabled="disabled" placeholder="您的QQ号码（必填）"></td>
+                            </tr>
+                            <tr>
+                                <td class="b3">个<br>人<br>兴<br>趣<br>爱<br>好</td>
+                                <td class="b2" colspan="3"><textarea disabled="disabled" placeholder="您的兴趣爱好"></textarea></td>
+                            </tr>
+                            <tr>
+                                <td class="b3">个<br>人<br>阅<br>历</td>
+                                <td class="b2" colspan="3"><textarea disabled="disabled" placeholder="您的阅历"></textarea></td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                    <h1 class="ztmd_sb">温馨提示: <p>亲，请您仔细填写在线报名信息，您的信息只会在我们在报名系统中显示，只有工作人员能浏览到你的信息，我们将把您的个人隐私放在工作的第一位。您还可以直接通过下方一键加入咨询群进行咨询。提交简历显示上传成功即可。期待您的到来!</p></h1>
+                    <div class="messsub">
+                        <a href="/fileDownLoad.action"> <input type="button" value="下载简历模板" style="background: red"></a><br/><br/>
+                        <input type="file" name="file" style="width: 230px;height: 25px;"/><br/><br/>
+                        <input type="submit" value="上传" style="background:#df3834;">
+
+                    </div>
+                </form>
+            </div>
+        </div>
+    </article>
+    <article class="tab_content1 none">
+        <div class="ksj_jianjie">
+            <div class="ksj_jianjie_z">
+                <form method="POST" enctype="multipart/form-data" action="fileUpLoad.action">
+                    <table class="ybmb">
+                        <caption><h1 class="ybmb_bt">预星探招募信息填写(模板简历下方下载上传)</h1></caption>
+                        <tbody>
+                        <tr>
+                            <td class="b1">姓名</td>
+                            <td class="b2"><input type="text"disabled="disabled"  placeholder="输入的姓名（必填）"></td>
+                            <td class="b1">性别</td>
+                            <td class="b2"><input type="text" disabled="disabled" placeholder="输入的性别（必填）"></td>
+                        </tr>
+                        <tr>
+                            <td class="b1">艺名</td>
+                            <td class="b2"><input type="text" disabled="disabled" placeholder="您的艺名"></td>
+                            <td class="b1">出生日期</td>
+                            <td class="b2"><input type="text" disabled="disabled" placeholder="如：1993年11月02日（必填）"></td>
+                        </tr>
+                        <tr>
+                            <td class="b1">手机</td>
+                            <td class="b2"><input type="text" disabled="disabled" placeholder="您的手机号码（必填）"></td>
+                            <td class="b1">邮箱</td>
+                            <td class="b2"><input type="text" disabled="disabled" placeholder="邮箱（必填）"></td>
+                        </tr>
+                        <tr>
+                            <td class="b1">微信</td>
+                            <td class="b2"><input type="text" disabled="disabled" placeholder="您的微信（必填）"></td>
+                            <td class="b1">QQ</td>
+                            <td class="b2"><input type="text" disabled="disabled" placeholder="您的QQ号码（必填）"></td>
+                        </tr>
+                        <tr>
+                            <td class="b3">工<br>作<br>经<br>验</td>
+                            <td class="b2" colspan="3"><textarea disabled="disabled" placeholder="您的工作经验"></textarea></td>
+                        </tr>
+                        <tr>
+                            <td class="b3">工<br>作<br>理<br>解</td>
+                            <td class="b2" colspan="3"><textarea disabled="disabled" placeholder="您的工作理解"></textarea></td>
+                        </tr>
+
+                        </tbody>
+                    </table>
+                    <h1 class="ztmd_sb">温馨提示: <p>亲，请您仔细填写在线报名信息，您的信息只会在我们在报名系统中显示，只有工作人员能浏览到你的信息，我们将把您的个人隐私放在工作的第一位。您还可以直接通过下方一键加入咨询群进行咨询。提交简历显示上传成功即可。期待您的到来!</p></h1>
+                    <div class="messsub">
+                        <a href="/fileDownLoadScout.action"> <input type="button" value="下载简历模板" style="background: red"></a><br/><br/>
+                        <input type="file" name="file" style="width: 230px;height: 25px;"/><br/><br/>
+                        <input type="submit" value="上传" style="background:#df3834;">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </article>
+</div>
+<!--页尾-->
+<div class="yw" id="yw">
+    <div class="yw_jz">
+        <div class="liebiao">
+            <div class="zuo_logo">
+                <img src="img/logo.png">
+                <ul>
+                    <li>
+                        <h3>公司简介</h3>
+                        <a href="company.html">公司简介</a>
+                        <a href="company.html">企业文化</a>
+                    </li>
+                    <li>
+                        <h3>主播展示</h3>
+                        <a href="Anchor.html">主播展示</a>
+                        <!--<a href="#">美食达人</a>-->
+                        <!--<a href="#">旅游达人</a>-->
+                        <!--<a href="#">服装达人</a>-->
+                    </li>
+                    <li>
+                        <h3>在线招募</h3>
+                        <a href="recruitment.html">主播招募</a>
+                        <a href="//shang.qq.com/wpa/qunwpa?idkey=b269571d216bae660badc1b6f85dc58063f1b65a24d8b901141e75ef9127ef7a">在线QQ</a>
+                    </li>
+                    <li>
+                        <h3>新闻动态</h3>
+                        <a href="news.html">公司新闻</a>
+                        <a href="#">行业新闻</a>
+                    </li>
+                    <li>
+                        <h3>投票活动</h3>
+                        <a href="tp.html">活动详情</a>
+                    </li>
+                    <li>
+                        <h3>联系我们</h3>
+                        <a href="Contactus.html">联系我们</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="ewm">
+                <div class="lxfs">
+                    <h1>加入我们</h1>
+                    <div class="qqzx"><a target="_blank" href="//shang.qq.com/wpa/qunwpa?idkey=b269571d216bae660badc1b6f85dc58063f1b65a24d8b901141e75ef9127ef7a"><img border="0" src="//pub.idqqimg.com/wpa/images/group.png" alt="。" title="加入群组"></a></div>
+                </div>
+                <div>
+                    <div class="sm"><img src="images/ewm_03.jpg"><span>官方订阅号</span></div>
+                    <div class="sm"><img src="images/ewm_03.jpg"><span>官方服务号</span></div>
+                </div>
+            </div>
+        </div>
+        <div class="beianhao">
+            <p>天津正恒科技发展有限公司   津ICP备18008841号-1</p>
+        </div>
+    </div>
+</div>
+<div class="side">
+    <ul>
+        <li><a href="#yw" ><div class="sidebox"><img src="img/side_icon06.png">公众号</div></a></li>
+        <li><a href= "//shang.qq.com/wpa/qunwpa?idkey=b269571d216bae660badc1b6f85dc58063f1b65a24d8b901141e75ef9127ef7a"><div class="sidebox"><img src="img/side_icon04.png">QQ</div></a></li>
+        <li><a href= "https://weibo.com/zhScience?is_hot=1" target="_blank"><div class="sidebox"><img src="img/side_icon03.png">新浪微博</div></a></li>
+        <li style="border:none;"><a href="javascript:goTop();" class="sidetop"><img src="img/side_icon05.png"></a></li>
+    </ul>
+</div>
+<script>
+    $(document).ready(function(){
+
+        $(".side ul li").hover(function(){
+            $(this).find(".sidebox").stop().animate({"width":"124px"},200).css({"opacity":"1","filter":"Alpha(opacity=100)","background":"#ae1c1c"})
+        },function(){
+            $(this).find(".sidebox").stop().animate({"width":"54px"},200).css({"opacity":"0.8","filter":"Alpha(opacity=80)","background":"#000"})
+        });
+
+    });
+    function goTop(){
+        $('html,body').animate({'scrollTop':0},600);
+    }
+
+    function changeTabs(obj) {
+        var currentSelect = 0;
+        var tabs = document.getElementById("ziye_ejjz");
+        var titles = tabs.getElementsByTagName("li");
+        for(var i = 0;i < titles.length; i++){
+            titles[i].className="";
+            if(obj == titles[i]){
+                currentSelect = i;
+            }
+        }
+        obj.className = "ziyehdh_dq";
+        var middleDiv = document.getElementsByClassName("detail");
+        var tabCotents = middleDiv[0].getElementsByTagName("article");
+        for(var j = 0;j < tabCotents.length;j++){
+            if(currentSelect == j){
+                tabCotents[j].className = "tab_content" + (j);
+            }else{
+                tabCotents[j].className = "none tab_content" + (j);
+            }
+        }
+    }
+    //TODO
+   /* function ifIsRrecruitment(obj){
+        var currentSelect = 0;
+        var tabs = document.getElementById("ziye_ejjz");
+        var titles = tabs.getElementsByTagName("li");
+        if(titles[1] == obj){
+
+        }
+
+    }*/
+   function downLoadResum() {
+       $.ajax({
+           url : "/fileDownLoad.action",
+           type : 'GET',
+           dataType : 'json',
+           contentType : 'application/json',
+           success : function(){
+               alert("下载成功！");
+           }
+
+       });
+   }
+    function downLoadResumScout() {
+        $.ajax({
+            url : "/fileDownLoadScout.action",
+            type : 'GET',
+            dataType : 'json',
+            contentType : 'application/json',
+            success : function(){
+                alert("下载成功！");
+            }
+
+        });
+    }
+</script>
+
+</body>
+</html>
