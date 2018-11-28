@@ -7,7 +7,7 @@ spring:
           name: test
           url: jdbc:mysql://127.0.0.1:3306/zhkj?useUnicode=true&characterEncoding=utf-8&useSSL=false
           username: root
-          password: zhkj12345678
+          password: root
           type: com.alibaba.druid.pool.DruidDataSource
           driver-class-name: com.mysql.jdbc.Driver
           filters: stat
