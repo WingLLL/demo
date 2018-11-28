@@ -7,6 +7,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.util.List;
@@ -23,9 +24,9 @@ public class showanchorlistController {
         return mv;
     }
 
-    @RequestMapping(value = "/showAnchor_wx")
-    public ResponseEntity anchorlist_wx(int pageNum){
-        List<zhanchor> list = showdao.queryAll(pageNum,21);
+    @RequestMapping(value = "/showAnchor_wx",method = RequestMethod.GET)
+    public ResponseEntity anchorlist_wx(){
+        List<zhanchor> list = showdao.queryAll_wx();
         if(list.size()>0){
             return new ResponseEntity<List<zhanchor>>(list, HttpStatus.OK);
         }else{

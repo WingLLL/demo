@@ -38,6 +38,23 @@ public interface zhanchorMapper {
     })
     List<zhanchor> queryAll();
 
+
+    @Select({
+            "select",
+            "zid, zname, zroomid, funsnum, zpic, zintro",
+            "from zhanchor"
+    })
+    @Results({
+            @Result(column="zid", property="zid", jdbcType=JdbcType.INTEGER, id=true),
+            @Result(column="zname", property="zname", jdbcType=JdbcType.VARCHAR),
+            @Result(column="zroomid", property="zroomid", jdbcType=JdbcType.INTEGER),
+            @Result(column="funsnum", property="funsnum", jdbcType=JdbcType.INTEGER),
+            @Result(column="zpic", property="zpic", jdbcType=JdbcType.VARCHAR),
+            @Result(column="zintro", property="zintro", jdbcType=JdbcType.VARCHAR)
+    })
+    List<zhanchor> queryAll_wx();
+
+
     @Delete({
         "delete from zhanchor",
         "where zid = #{zid,jdbcType=INTEGER}"
