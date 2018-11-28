@@ -98,6 +98,12 @@
 		.box .con1 img {
 			margin-right: 50px;
 		}
+		.box .con1 i {
+			font-style: normal;
+			font-size: 12px;
+			color: #FFCC33;
+
+		}
         .box .con0{
 			text-align: center;
             display: block;
@@ -151,6 +157,21 @@
 			width: 455px;
 			overflow-y:scroll;
 		}
+		.con1 table thead {
+			width: calc( 100% - 1em )
+		}
+		.con1 table thead, tbody tr {
+			display:table;
+			width:455px;
+			height: 60px;
+			table-layout:fixed;
+		}
+		.con1 table tbody {
+			display:block;
+			height:580px;
+			width: 455px;
+			overflow-y:scroll;
+		}
 		#box{
 			overflow-x: hidden;
 			overflow-y: scroll;
@@ -159,6 +180,14 @@
 			display: none;
 		}
 
+		#box1{
+			width: 500px;
+			overflow-x: hidden;
+			overflow-y: scroll;
+		}
+		#box1::-webkit-scrollbar {
+			display: none;
+		}
         .foot{
         	height: 400px;
         	width: 100%;
@@ -223,110 +252,140 @@
 		            </div>
 		            <div class="con1">
 		            	<table style="position: relative;top:80px; left: 0px;">
-			            	<tr style="color: white; font-weight: 900;font-size: 40;">
+							<thead>
+								<tr style="color: white; font-weight: 900;font-size: 40;">
+									<td>主播昵称</td>
+									<td style="width: 60px;">排名</td>
+									<td style="width: 50px;"><img src="img/vs.png" width="50px" height="50px"></td>
+									<td style="width: 60px;">排名</td>
+									<td>主播昵称</td>
+								</tr>
+						</thead>
+							<tbody id="box1">
+								<tr style="position: relative">
+									<td style="position: absolute;line-height:70px;top: 0;left:55px;font-size: 32px;width: 300px;background: #FFFF99;color: black;border-radius: 50%;margin: 0 30px">
+										八点场
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<a href="https://www.huya.com/yuanwang" target="_blank">
+											<img style="border-radius:50%;width: 50px;height: 50px;" src="activity_img/yuanwang.jpg" alt="图片不见了！"/>
+											<p >愿望</p>
+										</a>
 
-			            		<td>主播昵称</td>
-			            		<td style="width: 60px;">排名</td>
-			            		<td style="width: 50px;"><img src="img/vs.png" width="50px" height="50px"></td>
-			            		<td style="width: 60px;">排名</td>
-			            		<td>主播昵称</td>
+									</td>
+									<td style="width: 60px;"><i>2531430</i></td>
+									<td style="width: 50px;"><img src="img/vs.png" width="50px" height="50px"></td>
+									<td style="width: 60px;"><i>2025144</i></td>
+									<td>
+										<a href="https://www.huya.com/woshishou" target="_blank">
+											<img style="border-radius:50%;width: 50px;height: 50px;" src="activity_img/zhonyuwoshishou90808.jpg" alt="图片不见了！"/>
+											<p >众娱-我是兽·90808</p>
+										</a>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<a href="https://www.huya.com/11039285" target="_blank">
+											<img style="border-radius:50%;width: 50px;height: 50px;" src="activity_img/zhenghenglanqianqian.jpg" alt="图片不见了！"/>
+											<p >懒倩倩</p>
+										</a>
 
-			            	</tr>
-			            	<tr>
-								<td style="font-size: 32px;width: 480px;">
-									尚未开启
-								</td>
-							<!--</tr>
-							<tr>
-								<td>
-									<a href="https://www.huya.com/11972372" target="_blank">
-										<img style="border-radius:50%;width: 50px;height: 50px;" src="activity_img/kuaidilong.jpg" alt="图片不见了！"/>
-										<p >快递龙</p>
-									</a>
+									</td>
+									<td style="width: 60px;"><i>2531430</i></td>
+									<td style="width: 50px;"><img src="img/vs.png" width="50px" height="50px"></td>
+									<td style="width: 60px;"><i>1518858</i></td>
+									<td>
+										<a href="https://www.huya.com/10859094" target="_blank">
+											<img style="border-radius:50%;width: 50px;height: 50px;" src="activity_img/xiaoxuan.jpg" alt="图片不见了！"/>
+											<p >小轩</p>
+										</a>
+									</td>
+								</tr>
+								<tr style="position: relative">
+									<td style="position: absolute;line-height:70px;top: 0px;left:55px;font-size: 32px;width: 300px;background: #FFFF66;color: black;border-radius: 50%;margin: 0 30px">
+										九点场
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<a href="https://www.huya.com/16172546" target="_blank">
+											<img style="border-radius:50%;width: 50px;height: 50px;" src="activity_img/zhenghengxiaolizhi.jpg" alt="图片不见了！"/>
+											<p >小荔枝</p>
+										</a>
 
-								</td>
-								<td style="width: 60px;">22</td>
-								<td style="width: 50px;"><img src="img/vs.png" width="50px" height="50px"></td>
-								<td style="width: 60px;">27</td>
-								<td>
-									<a href="https://www.huya.com/11972372" target="_blank">
-										<img style="border-radius:50%;width: 50px;height: 50px;" src="activity_img/benxiaohai.jpg" alt="图片不见了！"/>
-										<p >笨小孩</p>
-									</a>
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<a href="https://www.huya.com/11972372" target="_blank">
-										<img style="border-radius:50%;width: 50px;height: 50px;" src="activity_img/guilianxiaochou.jpg" alt="图片不见了！"/>
-										<p >鬼脸小丑</p>
-									</a>
+									</td>
+									<td style="width: 60px;"><i>2278287</i></td>
+									<td style="width: 50px;"><img src="img/vs.png" width="50px" height="50px"></td>
+									<td style="width: 60px;"><i>2025144</i></td>
+									<td>
+										<a href="https://www.huya.com/937733" target="_blank">
+											<img style="border-radius:50%;width: 50px;height: 50px;" src="activity_img/liuxingyu.jpg" alt="图片不见了！"/>
+											<p >流星雨</p>
+										</a>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<a href="https://www.huya.com/13499705" target="_blank">
+											<img style="border-radius:50%;width: 50px;height: 50px;" src="activity_img/zhenghengfiveqiudingyue.jpg" alt="图片不见了！"/>
+											<p >正恒丶Five求订阅</p>
+										</a>
 
-								</td>
-								<td style="width: 60px;">22</td>
-								<td style="width: 50px;"><img src="img/vs.png" width="50px" height="50px"></td>
-								<td style="width: 60px;">27</td>
-								<td>
-									<a href="https://www.huya.com/11972372" target="_blank">
-										<img style="border-radius:50%;width: 50px;height: 50px;" src="activity_img/zhenghengjuelian.jpg" alt="图片不见了！"/>
-										<p >正恒丶绝恋</p>
-									</a>
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<a href="https://www.huya.com/11972372" target="_blank">
-										<img style="border-radius:50%;width: 50px;height: 50px;" src="activity_img/shendu.jpg" alt="图片不见了！"/>
-										<p >神度</p>
-									</a>
+									</td>
+									<td style="width: 60px;"><i>1518858</i></td>
+									<td style="width: 50px;"><img src="img/vs.png" width="50px" height="50px"></td>
+									<td style="width: 60px;"><i>1518858</i></td>
+									<td>
+										<a href="https://www.huya.com/15347337" target="_blank">
+											<img style="border-radius:50%;width: 50px;height: 50px;" src="activity_img/mengsui.jpg" alt="图片不见了！"/>
+											<p>梦碎</p>
+										</a>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<a href="https://www.huya.com/shashajiang" target="_blank">
+											<img style="border-radius:50%;width: 50px;height: 50px;" src="activity_img/shashajiang.jpg" alt="图片不见了！"/>
+											<p >正恒丶莎莎酱</p>
+										</a>
 
-								</td>
-								<td style="width: 60px;">22</td>
-								<td style="width: 50px;"><img src="img/vs.png" width="50px" height="50px"></td>
-								<td style="width: 60px;">27</td>
-								<td>
-									<a href="https://www.huya.com/11972372" target="_blank">
-										<img style="border-radius:50%;width: 50px;height: 50px;" src="activity_img/zhenghengjuelian.jpg" alt="图片不见了！"/>
-										<p >舒克</p>
-									</a>
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<a href="https://www.huya.com/11972372" target="_blank">
-										<img style="border-radius:50%;width: 50px;height: 50px;" src="activity_img/Svenluxi.jpg" alt="图片不见了！"/>
-										<p >Sven丶路西</p>
-									</a>
+									</td>
+									<td style="width: 60px;"><i>3037716</i></td>
+									<td style="width: 50px;"><img src="img/vs.png" width="50px" height="50px"></td>
+									<td style="width: 60px;"><i>1518858</i></td>
+									<td>
+										<a href="https://www.huya.com/10986358" target="_blank">
+											<img style="border-radius:50%;width: 50px;height: 50px;" src="activity_img/zhenghengyiji.jpg" alt="图片不见了！"/>
+											<p >正恒丶音继</p>
+										</a>
+									</td>
+								</tr>
+								<tr style="position: relative;">
+									<td style="position: absolute;line-height:70px;top: 0;left:55px;font-size: 32px;width: 300px;background: #FF9900;color: black;border-radius: 50%;margin: 0 30px">
+										十点场
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<a href="https://www.huya.com/16654460" target="_blank">
+											<img style="border-radius:50%;width: 50px;height: 50px;" src="activity_img/zhenghengwenxiaorou.jpg" alt="图片不见了！"/>
+											<p >正恒丶温小柔</p>
+										</a>
 
-								</td>
-								<td style="width: 60px;">22</td>
-								<td style="width: 50px;"><img src="img/vs.png" width="50px" height="50px"></td>
-								<td style="width: 60px;">27</td>
-								<td>
-									<a href="https://www.huya.com/11972372" target="_blank">
-										<img style="border-radius:50%;width: 50px;height: 50px;" src="activity_img/zhenghenghuyuxiaotian.jpg" alt="图片不见了！"/>
-										<p >正恒互娱丶小天</p>
-									</a>
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<a href="https://www.huya.com/11972372" target="_blank">
-										<img style="border-radius:50%;width: 50px;height: 50px;" src="activity_img/zhenghengfeifei.jpg" alt="图片不见了！"/>
-										<p >正恒-飞飞丶90313</p>
-									</a>
-
-								</td>
-								<td style="width: 60px;">22</td>
-								<td style="width: 50px;"><img src="img/vs.png" width="50px" height="50px"></td>
-								<td style="width: 60px;">27</td>
-								<td>
-									<a href="https://www.huya.com/11972372" target="_blank">
-										<img style="border-radius:50%;width: 50px;height: 50px;" src="activity_img/SMmxiaoming.jpg" alt="图片不见了！"/>
-										<p >SMm丶筱铭</p>
-									</a>
-								</td>
-							</tr>-->
+									</td>
+									<td style="width: 60px;"><i>1772001</i></td>
+									<td style="width: 50px;"><img src="img/vs.png" width="50px" height="50px"></td>
+									<td style="width: 60px;"><i>3037716</i></td>
+									<td>
+										<a href="https://www.huya.com/yyddm" target="_blank">
+											<img style="border-radius:50%;width: 50px;height: 50px;" src="activity_img/zhenghengdingdingmao.jpg" alt="图片不见了！"/>
+											<p >正恒丶叮叮猫</p>
+										</a>
+									</td>
+								</tr>
+							</tbody>
 			            </table>
 
 		            </div>
