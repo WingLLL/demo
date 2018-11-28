@@ -1,4 +1,7 @@
-package com.zhkj.demo.util.Excel;
+package com.zhkj.demo.util.ExcelVS;
+
+import jxl.Sheet;
+import jxl.Workbook;
 
 import java.io.File;
 import java.sql.ResultSet;
@@ -6,29 +9,29 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-import jxl.Sheet;
-import jxl.Workbook;
-
 /**
  * Created by zhaoyu
  */
 public class AnchorService {
-
-    public static List<Anchor> getAllByDb(){
-        List<Anchor> list=new ArrayList<Anchor>();
+    public static List<AnchorVS> getAllByDb(){
+        List<AnchorVS> list=new ArrayList<AnchorVS>();
 
         try {
             ExcelImport db=new ExcelImport();
-            String sql="select * from anchor";
+            String sql="select * from activity_anchor_vs";
             ResultSet rs= db.Search(sql, null);
             while (rs.next()) {
-                String name=rs.getString("anchorname");
+                String name=rs.getString("name");
+                String name_vs=rs.getString("name_vs");
                 String url=rs.getString("url");
+                String url_vs=rs.getString("url_vs");
                 String time=rs.getString("time");
                 String imghost=rs.getString("imghost");
+                String imghost_vs=rs.getString("imghost_vs");
                 Integer value=rs.getInt("value");
-
-                list.add(new Anchor(name,value,url,time,imghost));
+                Integer value_vs=rs.getInt("value_vs");
+                String vs=rs.getString("vs");
+                list.add(new AnchorVS(name,name_vs,url,url_vs,value,value_vs,imghost,imghost_vs,time,vs));
             }
 
         } catch (SQLException e) {
@@ -43,8 +46,8 @@ public class AnchorService {
      * @param file 文件完整路径
      * @return
      */
-    public static List<Anchor> getAllByExcel(String file){
-        List<Anchor> list=new ArrayList<Anchor>();
+    public static List<AnchorVS> getAllByExcel(String file){
+        List<AnchorVS> list=new ArrayList<AnchorVS>();
         try {
             Workbook rwb=Workbook.getWorkbook(new File(file));
             Sheet rs=rwb.getSheet(0);
@@ -55,13 +58,17 @@ public class AnchorService {
             for (int i = 1; i < rows; i++) {
                 for (int j = 0; j < clos; j++) {
                     //第一个是列数，第二个是行数
+                    String time = rs.getCell(j++,i).getContents();
                     String name=rs.getCell(j++, i).getContents();//默认最左边编号也算一列 所以这里得j++
-                    Integer value= Integer.parseInt(rs.getCell(j++, i).getContents().trim()) * 253143;
-                    String url=rs.getCell(j++, i).getContents();
-                    String time=rs.getCell(j++, i).getContents();
+                    Integer value= Integer.parseInt(rs.getCell(j++, i).getContents());
                     String imghost=rs.getCell(j++, i).getContents();
-
-                    list.add(new Anchor(name, value,url,time,imghost));
+                    String url=rs.getCell(j++, i).getContents();
+                    String vs = rs.getCell(j++,i).getContents();
+                    String imghost_vs=rs.getCell(j++, i).getContents();
+                    String url_vs=rs.getCell(j++, i).getContents();
+                    Integer value_vs= Integer.parseInt(rs.getCell(j++, i).getContents().trim());
+                    String name_vs=rs.getCell(j++, i).getContents();
+                    list.add(new AnchorVS(name,name_vs,url,url_vs,value,value_vs,imghost,imghost_vs,time,vs));
                 }
             }
         } catch (Exception e) {
@@ -80,7 +87,7 @@ public class AnchorService {
     public static boolean isExist(String name){
         try {
             ExcelImport db=new ExcelImport();
-            ResultSet rs=db.Search("select * from activity_anchor where anchorname=?", new String[]{name+""});
+            ResultSet rs=db.Search("select * from activity_anchor_vs where name=?", new String[]{name+""});
             if (rs.next()) {
                 return true;
             }
