@@ -104,6 +104,32 @@
 			color: #FFCC33;
 
 		}
+
+		.box .con2 p{
+			position: absolute;
+			left: 80px;
+			top:25px;
+			color: white;
+			font-size: 14px;
+			word-break: break-all;/*属性规定自动换行的处理方法。normal(使用浏览器默认的换行规则。),break-all(允许在单词内换行。),keep-all(只能在半角空格或连字符处换行。)*/
+			text-overflow: ellipsis;
+			display: -webkit-box; /** 对象作为伸缩盒子模型显示 **/
+			-webkit-box-orient: vertical; /** 设置或检索伸缩盒对象的子元素的排列方式 **/
+			-webkit-line-clamp: 1; /** 显示的行数 **/
+			overflow: hidden;  /** 隐藏超出的内容 **/
+		}
+		.box .con2 img {
+			margin-right: 50px;
+		}
+		.box .con2 i {
+			font-style: normal;
+			font-size: 12px;
+			color: #FFCC33;
+
+		}
+
+
+
         .box .con0{
 			text-align: center;
             display: block;
@@ -122,6 +148,9 @@
 		.con1 table {
 			width: 500px;
 		}
+		.con2 table {
+			width: 500px;
+		}
 		.con1 td{
 			width: 150px;
 			height: 70px;
@@ -130,15 +159,15 @@
 			font-size: 16px;
 		}
 		.con2 td{
-			width: 70px;
-			height: 50px;
+			width: 150px;
+			height: 70px;
 			text-align: center;
 			color: white;
 			font-size: 16px;
 		}
 		.con3 td{
-			width: 70px;
-			height: 50px;
+			width: 150px;
+			height: 70px;
 			text-align: center;
 			color: white;
 			font-size: 16px;
@@ -172,6 +201,23 @@
 			width: 455px;
 			overflow-y:scroll;
 		}
+
+		.con2 table thead {
+			width: calc( 100% - 1em )
+		}
+		.con2 table thead, tbody tr {
+			display:table;
+			width:455px;
+			height: 60px;
+			table-layout:fixed;
+		}
+		.con2 table tbody {
+			display:block;
+			height:580px;
+			width: 455px;
+			overflow-y:scroll;
+		}
+
 		#box{
 			overflow-x: hidden;
 			overflow-y: scroll;
@@ -186,6 +232,14 @@
 			overflow-y: scroll;
 		}
 		#box1::-webkit-scrollbar {
+			display: none;
+		}
+		#box2{
+			width: 500px;
+			overflow-x: hidden;
+			overflow-y: scroll;
+		}
+		#box2::-webkit-scrollbar {
 			display: none;
 		}
         .foot{
@@ -390,22 +444,79 @@
 
 		            </div>
 		            <div class="con2">
-		            	<table style="position: relative;top:80px; left: 0px;">
-			            	<tr style="color: white; font-weight: 900;font-size: 40;">
-			            		<td>荣耀值</td>
-			            		<td>主播昵称</td>
-			            		<td>排名</td>
-			            		<td  style="width: 50px;"><img src="img/vs.png" width="50px" height="50px"></td>
-			            		<td>排名</td>
-			            		<td>主播昵称</td>
-			            		<td>荣誉值</td>
-			            	</tr>
-							<tr>
-								<td style="font-size: 32px;width: 480px;">
-									尚未开启
+						<table style="position: relative;top:80px; left: 0px;">
+							<thead>
+							<tr style="color: white; font-weight: 900;font-size: 40;">
+								<td>主播昵称</td>
+								<td style="width: 60px;">排名</td>
+								<td style="width: 50px;"><img src="img/vs.png" width="50px" height="50px"></td>
+								<td style="width: 60px;">排名</td>
+								<td>主播昵称</td>
+							</tr>
+							</thead>
+							<tbody id="box2">
+							<tr style="position: relative">
+								<td style="position: absolute;line-height:70px;top: 0;left:55px;font-size: 32px;width: 300px;background: #FFFF99;color: black;border-radius: 50%;margin: 0 30px">
+									九点场
 								</td>
 							</tr>
-			            </table>
+							<tr>
+								<td>
+									<a href="https://www.huya.com/shashajiang" target="_blank">
+										<img style="border-radius:50%;width: 50px;height: 50px;" src="activity_img/shashajiang.jpg" alt="图片不见了！"/>
+										<p >正恒丶莎莎酱</p>
+									</a>
+
+								</td>
+								<td style="width: 60px;"><i>4050352</i></td>
+								<td style="width: 50px;"><img src="img/vs.png" width="50px" height="50px"></td>
+								<td style="width: 60px;"><i>2531430</i></td>
+								<td>
+									<a href="https://www.huya.com/937733" target="_blank">
+										<img style="border-radius:50%;width: 50px;height: 50px;" src="activity_img/liuxingyu.jpg" alt="图片不见了！"/>
+										<p >流星雨</p>
+									</a>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="https://www.huya.com/16654460" target="_blank">
+										<img style="border-radius:50%;width: 50px;height: 50px;" src="activity_img/zhenghengwenxiaorou.jpg" alt="图片不见了！"/>
+										<p >正恒丶温小柔</p>
+									</a>
+
+								</td>
+								<td style="width: 60px;"><i>3290911</i></td>
+								<td style="width: 50px;"><img src="img/vs.png" width="50px" height="50px"></td>
+								<td style="width: 60px;"><i>2784617</i></td>
+								<td>
+									<a href="https://www.huya.com/11039285" target="_blank">
+										<img style="border-radius:50%;width: 50px;height: 50px;" src="activity_img/zhenghenglanqianqian.jpg" alt="图片不见了！"/>
+										<p >懒倩倩</p>
+									</a>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="https://www.huya.com/16172546" target="_blank">
+										<img style="border-radius:50%;width: 50px;height: 50px;" src="activity_img/zhenghengxiaolizhi.jpg" alt="图片不见了！"/>
+										<p >小荔枝</p>
+									</a>
+
+								</td>
+								<td style="width: 60px;"><i>3037764</i></td>
+								<td style="width: 50px;"><img src="img/vs.png" width="50px" height="50px"></td>
+								<td style="width: 60px;"><i>3290911</i></td>
+								<td>
+									<a href="https://www.huya.com/yyddm" target="_blank">
+										<img style="border-radius:50%;width: 50px;height: 50px;" src="activity_img/zhenghengdingdingmao.jpg" alt="图片不见了！"/>
+										<p >正恒丶叮叮猫</p>
+									</a>
+								</td>
+							</tr>
+
+							</tbody>
+						</table>
 
 		            </div>
 		            <div class="con3">

@@ -10,6 +10,7 @@ public class getNum {
     public static void getNum(){
         System.out.println("6:"+253147*6);
         System.out.println("7:"+253147*7);
+        System.out.println("11:"+253147*10);
         System.out.println("11:"+253147*11);
         System.out.println("12:"+253147*12);
         System.out.println("13:"+253147*13);
