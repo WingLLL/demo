@@ -15,5 +15,8 @@ public class getNum {
         System.out.println("12:"+253147*12);
         System.out.println("13:"+253147*13);
         System.out.println("16:"+253147*16);
+        System.out.println("17:"+253147*17);
+        System.out.println("18:"+253147*18);
+        System.out.println("19:"+253147*19);
     }
 }
